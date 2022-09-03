@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasbeh</title>
+    <style>
+        .tasbeh {
+            width: 130px;
+            height: 175px;
+            background-color: coral;
+            border: 1px solid chocolate;
+            position: absolute;
+            top: 10%;
+            left: 39%;
+            border-radius: 20%;
+            
+        }
+
+        .ekran {
+            width: 55%;
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            height: 30px;
+            caret-color: white;
+            border-radius: 9%;
+            border: 1px solid floralwhite;
+            text-align: center;
+            font-size: 34px;
+        }
+
+        .tugma {
+            position: absolute;
+            top: 42%;
+            left: 35%;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            background-color: gray;
+        }
+
+        .nolga {
+            position: absolute;
+            top: 74%;
+            left: 40%;
+            width: 29px;
+            height: 29px;
+            border-radius: 50%;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="tasbeh">
+        <input type="text" class="ekran" value="0" />
+        <button class="tugma"></button>
+        <button class="nolga"></button>
+    </div>
+
+    <script text="text/javascript">
+
+        document.querySelector('.tugma').addEventListener('click', function() {
+            const ekran = document.querySelector('.ekran')
+            console.log(typeof parseInt(ekran.value))
+            ekran.value = parseInt(ekran.value) + 1
+        })
+
+        document.querySelector('.nolga').addEventListener('click', function() {
+            document.querySelector('.ekran').value = 0
+        })
+    </script>
+</body>
+</html>
